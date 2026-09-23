@@ -6,10 +6,6 @@ workflows:
     environment:
       flutter: stable
     scripts:
-      - name: Fix Android
-        script: |
-          rm -rf android
-          flutter create . --platforms=android --project-name bb_keyboard_dark
       - name: Build APK
         script: flutter build apk --release
     artifacts:
